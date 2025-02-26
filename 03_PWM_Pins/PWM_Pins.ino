@@ -9,12 +9,12 @@ void setup()
 
 void loop()
 {
-  for (int i=0; i<=255; i++) {
+  for (int i=0; i<=255; i+=5) {
     analogWrite(LEDPin, i);
-    delay(3000);
+    delay(1000);
   }
-  for (int i=255; i>=0; i--) {
+  for (int i=255; i>=0; i-=5) {
     analogWrite(LEDPin, i);
-    delay(3000);
+    delay(1000);
   }
 }
