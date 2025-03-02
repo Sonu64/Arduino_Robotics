@@ -9,8 +9,10 @@ int debounce(int);
 
 int debounce(int last) {
   int current = digitalRead(buttonPin);
-  if (current != last)
+  if (current != last) {
+    current = digitalRead(buttonPin);
     delay(50);
+  }
   return current;
 }
 
